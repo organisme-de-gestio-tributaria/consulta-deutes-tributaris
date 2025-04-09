@@ -1,0 +1,410 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0",
+		"title": "Deutes"
+	},
+	"host": "wsproves.orgt.diba.cat",
+	"basePath": "/Deutes/DeutesService.svc/rest",
+	"paths": {
+		"/GenerarDocumentREST": {
+			"get": {
+				"summary": "GenerarDocumentREST",
+				"description": "Genera document acreditatiu de si un NIF té o no tributs pendents en un ajuntament",
+				"operationId": "ORGT.WebServices.Deutes.DeutesServiceREST.GenerarDocumentREST",
+				"consumes": [
+					"application/json",
+					"application/xml"
+				],
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "DNINIFContribuent",
+						"in": "query",
+						"description": "DNI, NIF o NIE del contribuent. 8 posicions, sense el dígit de control del final",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "CodiINE10",
+						"in": "query",
+						"description": "Codi INE de 10 caràcters que identifica el municipi",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "Idioma",
+						"in": "query",
+						"description": "Idioma. Valors acceptats: 'C' o 'E', català o espanyol",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Resposta amb deutes",
+						"schema": {
+							"$ref": "#/definitions/ORGT.WebServices.Deutes.DocumentResultREST"
+						},
+						"examples": {
+							"application/json": {
+								"Deutes": {
+									"CodiINE10": "0810170005",
+									"DNINIFContribuent": "00000000",
+									"Idioma": "C"
+								},
+								"Document": "documentPdfEnBase64",
+								"TeDeutes": true
+							}
+						}
+					}
+				}
+			}
+		},
+		"/ObtenirLlistaDeutesREST": {
+			"get": {
+				"summary": "ObtenirLlistaDeutesREST",
+				"description": "Obté la llista de tributs pendents d'un DNI o NIF en un ajuntament",
+				"operationId": "ORGT.WebServices.Deutes.DeutesServiceREST.ObtenirLlistaDeutesREST",
+				"consumes": [
+					"application/json",
+					"application/xml"
+				],
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "DNINIFContribuent",
+						"in": "query",
+						"description": "DNI, NIF o NIE del contribuent. 8 posicions, sense el dígit de control del final",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "CodiINE10",
+						"in": "query",
+						"description": "Codi INE de 10 caràcters que identifica el municipi",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "Idioma",
+						"in": "query",
+						"description": "Idioma. Valors acceptats: 'C' o 'E', català o espanyol",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Resposta amb deutes",
+						"schema": {
+							"$ref": "#/definitions/ORGT.WebServices.Deutes.LlistaDeutesResult"
+						},
+						"examples": {
+							"application/json": {
+								"Deutes": {
+									"CodiINE10": "0810170005",
+									"DNINIFContribuent": "00000000",
+									"Idioma": "C"
+								},
+								"LlistaDeutes": [
+									{
+										"AnyCarrec": 2022,
+										"Carrec": "2539417",
+										"CodiConcepte": "01",
+										"CodiIncidencia": "39",
+										"CodiMunicipi": "100",
+										"DescripcioConcepte": "IMPOST BÉNS IMMOBLES URBANS",
+										"Estat": "39",
+										"Exercici": 2022,
+										"Expedient": "22294319",
+										"ImportAPagar": 7867,
+										"ImportCostes": 26,
+										"ImportInteressos": 647,
+										"ImportRecarrec": 1199,
+										"ImportValor": 58695,
+										"NomMunicipi": "L'HOSPITALET DE LLOBREGAT",
+										"ObjecteTributari": "CARRER PIS NUMERO",
+										"SaldoValor": 5995,
+										"Situacio": "V",
+										"TipusValor": "R",
+										"Valor": "0000060414"
+									},
+									{
+										"AnyCarrec": 2023,
+										"Carrec": "2807430",
+										"CodiConcepte": "03",
+										"CodiIncidencia": "39",
+										"CodiMunicipi": "100",
+										"DescripcioConcepte": "IMPOST VEHICLES TRAC. MECÀNICA",
+										"Estat": "39",
+										"Exercici": 2023,
+										"Expedient": "22294319",
+										"ImportAPagar": 21381,
+										"ImportCostes": 127,
+										"ImportInteressos": 1262,
+										"ImportRecarrec": 3332,
+										"ImportValor": 16660,
+										"NomMunicipi": "L'HOSPITALET DE LLOBREGAT",
+										"ObjecteTributari": "1234-ABC      DAF FT XF 95 530",
+										"SaldoValor": 16660,
+										"Situacio": "V",
+										"TipusValor": "R",
+										"Valor": "0000035211"
+									}
+								],
+								"TeDeutes": true
+							}
+						}
+					}
+				}
+			}
+		},
+		"/ObtenirLlistaDeutesVehicleREST": {
+			"get": {
+				"summary": "ObtenirLlistaDeutesREST",
+				"description": "Obté la llista de tributs pendents d'un vehicle i DNI/NIF en un ajuntament",
+				"operationId": "ORGT.WebServices.Deutes.DeutesServiceREST.ObtenirLlistaDeutesVehicleREST",
+				"consumes": [
+					"application/json",
+					"application/xml"
+				],
+				"produces": [
+					"application/json"
+				],
+				"parameters": [
+					{
+						"name": "DNINIFContribuent",
+						"in": "query",
+						"description": "DNI, NIF o NIE del contribuent. 8 posicions, sense el dígit de control del final",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "CodiINE10",
+						"in": "query",
+						"description": "Codi INE de 10 caràcters que identifica el municipi",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "Idioma",
+						"in": "query",
+						"description": "Idioma. Valors acceptats: 'C' o 'E', català o espanyol",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "Matricula",
+						"in": "query",
+						"description": "Matrícula del vehicle. Exemples de matrícules acceptades: '1234BCD', '1234-BCD', '1234 BCD', 'B1234RS', 'B-1234-RS', 'B 1234 RS'",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Resposta amb deutes",
+						"schema": {
+							"$ref": "#/definitions/ORGT.WebServices.Deutes.LlistaDeutesResult"
+						},
+						"examples": {
+							"application/json": {
+								"Deutes": {
+									"CodiINE10": "0810170005",
+									"DNINIFContribuent": "00000000",
+									"Idioma": null
+								},
+								"LlistaDeutes": [
+									{
+										"AnyCarrec": 2023,
+										"Carrec": "2807430",
+										"CodiConcepte": "03",
+										"CodiIncidencia": "39",
+										"CodiMunicipi": "100",
+										"DescripcioConcepte": "IMPOST VEHICLES TRAC. MECÀNICA",
+										"Estat": "39",
+										"Exercici": 2023,
+										"Expedient": "22294319",
+										"ImportAPagar": 21381,
+										"ImportCostes": 127,
+										"ImportInteressos": 1262,
+										"ImportRecarrec": 3332,
+										"ImportValor": 16660,
+										"NomMunicipi": "PROVES100L'HOSPITALET DE",
+										"ObjecteTributari": "1234-ABC      DAF FT XF 95 530",
+										"SaldoValor": 16660,
+										"Situacio": "V",
+										"TipusValor": "R",
+										"Valor": "0000035211"
+									}
+								],
+								"TeDeutes": true
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"ORGT.Negoci.Recaptacio.ValorDeute": {
+			"properties": {
+				"Carrec": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"Valor": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"ObjecteTributari": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"CodiMunicipi": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"NomMunicipi": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"Exercici": {
+					"type": "integer",
+					"format": "int16",
+					"uniqueItems": false
+				},
+				"CodiConcepte": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"DescripcioConcepte": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"TipusValor": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"Situacio": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"ImportValor": {
+					"type": "integer",
+					"format": "int64",
+					"uniqueItems": false
+				},
+				"SaldoValor": {
+					"type": "integer",
+					"format": "int64",
+					"uniqueItems": false
+				},
+				"ImportRecarrec": {
+					"type": "integer",
+					"format": "int64",
+					"uniqueItems": false
+				},
+				"ImportInteressos": {
+					"type": "integer",
+					"format": "int64",
+					"uniqueItems": false
+				},
+				"ImportCostes": {
+					"type": "integer",
+					"format": "int64",
+					"uniqueItems": false
+				},
+				"ImportAPagar": {
+					"type": "integer",
+					"format": "int64",
+					"uniqueItems": false
+				},
+				"CodiIncidencia": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"Expedient": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"AnyCarrec": {
+					"type": "integer",
+					"format": "int16",
+					"uniqueItems": false
+				},
+				"Estat": {
+					"type": "string",
+					"uniqueItems": false
+				}
+			},
+			"type": "object",
+			"format": "ORGT.Negoci.Recaptacio.ValorDeute"
+		},
+		"ORGT.WebServices.Deutes.Deutes": {
+			"required": [
+				"CodiINE10",
+				"DNINIFContribuent",
+				"Idioma"
+			],
+			"properties": {
+				"CodiINE10": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"DNINIFContribuent": {
+					"type": "string",
+					"uniqueItems": false
+				},
+				"Idioma": {
+					"type": "string",
+					"uniqueItems": false
+				}
+			},
+			"type": "object",
+			"format": "ORGT.WebServices.Deutes.Deutes"
+		},
+		"ORGT.WebServices.Deutes.DocumentResultREST": {
+			"properties": {
+				"Deutes": {
+					"$ref": "#/definitions/ORGT.WebServices.Deutes.Deutes"
+				},
+				"TeDeutes": {
+					"type": "boolean",
+					"uniqueItems": false
+				},
+				"Document": {
+					"type": "string",
+					"uniqueItems": false
+				}
+			},
+			"type": "object",
+			"format": "ORGT.WebServices.Deutes.DocumentResultREST"
+		},
+		"ORGT.WebServices.Deutes.LlistaDeutesResult": {
+			"properties": {
+				"Deutes": {
+					"$ref": "#/definitions/ORGT.WebServices.Deutes.Deutes"
+				},
+				"TeDeutes": {
+					"type": "boolean",
+					"uniqueItems": false
+				},
+				"LlistaDeutes": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/ORGT.Negoci.Recaptacio.ValorDeute"
+					},
+					"uniqueItems": false
+				}
+			},
+			"type": "object",
+			"format": "ORGT.WebServices.Deutes.LlistaDeutesResult"
+		}
+	}
+}
