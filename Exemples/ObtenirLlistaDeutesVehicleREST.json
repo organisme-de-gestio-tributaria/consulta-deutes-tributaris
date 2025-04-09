@@ -1,0 +1,32 @@
+{
+  "Deutes": {
+    "CodiINE10": "0810170005",
+    "DNINIFContribuent": "00000000",
+    "Idioma": null
+  },
+  "LlistaDeutes": [
+    {
+      "AnyCarrec": 2023,
+      "Carrec": "2807430",
+      "CodiConcepte": "03",
+      "CodiIncidencia": "39",
+      "CodiMunicipi": "100",
+      "DescripcioConcepte": "IMPOST VEHICLES TRAC. MECÀNICA",
+      "Estat": "39",
+      "Exercici": 2023,
+      "Expedient": "22294319",
+      "ImportAPagar": 21381,
+      "ImportCostes": 127,
+      "ImportInteressos": 1262,
+      "ImportRecarrec": 3332,
+      "ImportValor": 16660,
+      "NomMunicipi": "PROVES100L'HOSPITALET DE",
+      "ObjecteTributari": "1234-ABC      DAF FT XF 95 530",
+      "SaldoValor": 16660,
+      "Situacio": "V",
+      "TipusValor": "R",
+      "Valor": "0000035211"
+    }  
+  ],
+  "TeDeutes": true
+}
