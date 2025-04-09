@@ -38,7 +38,7 @@ A continuació es presenten diversos exemples de crides i respostes. Podeu troba
 |---|---|---|
 | GenerarDocumentREST | GET | [URL petició](http://wsproves.orgt.diba.cat/Deutes/DeutesServiceREST.svc/GenerarDocumentREST?DNINIFContribuent=00000000&CodiINE10=0810170005&Idioma=C) <br> [Resposta]()
 | ObtenirLlistaDeutesREST | GET | [URL petició](http://wsproves.orgt.diba.cat/Deutes/DeutesServiceREST.svc/ObtenirLlistaDeutesREST?DNINIFContribuent=00000000&CodiINE10=0810170005&Idioma=C) <br> [Resposta]()
-| ObtenirLlistaDeutesVehicleREST | GET | [URL petició](http://wsproves.orgt.diba.cat/Deutes/DeutesServiceREST.svc/ObtenirLlistaDeutesVehicleREST?DNINIFContribuent=00000000&CodiINE10=0810170005&Idioma=C&Matricula=1234ABC)) <br> [Resposta]()
+| ObtenirLlistaDeutesVehicleREST | GET | [URL petició](http://wsproves.orgt.diba.cat/Deutes/DeutesServiceREST.svc/ObtenirLlistaDeutesVehicleREST?DNINIFContribuent=00000000&CodiINE10=0810170005&Idioma=C&Matricula=1234ABC) <br> [Resposta]()
 
 
 
