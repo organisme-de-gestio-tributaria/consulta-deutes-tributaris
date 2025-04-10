@@ -36,9 +36,9 @@ A continuació es presenten diversos exemples de crides i respostes. Podeu troba
 
 | Endpoint | Mètode HTTP | Exemples |
 |---|---|---|
-| GenerarDocumentREST | GET | [URL petició](http://wsproves.orgt.diba.cat/Deutes/DeutesServiceREST.svc/GenerarDocumentREST?DNINIFContribuent=00000000&CodiINE10=0810170005&Idioma=C) <br> [Resposta](https://github.com/organisme-de-gestio-tributaria/consulta-deutes-tributaris/blob/main/Exemples/Resposta%20GenerarDocumentREST.json)
-| ObtenirLlistaDeutesREST | GET | [URL petició](http://wsproves.orgt.diba.cat/Deutes/DeutesServiceREST.svc/ObtenirLlistaDeutesREST?DNINIFContribuent=00000000&CodiINE10=0810170005&Idioma=C) <br> [Resposta](https://github.com/organisme-de-gestio-tributaria/consulta-deutes-tributaris/blob/main/Exemples/ObtenirLlistaDeutesREST.json)
-| ObtenirLlistaDeutesVehicleREST | GET | [URL petició](http://wsproves.orgt.diba.cat/Deutes/DeutesServiceREST.svc/ObtenirLlistaDeutesVehicleREST?DNINIFContribuent=00000000&CodiINE10=0810170005&Idioma=C&Matricula=1234ABC) <br> [Resposta](https://github.com/organisme-de-gestio-tributaria/consulta-deutes-tributaris/blob/main/Exemples/ObtenirLlistaDeutesVehicleREST.json)
+| GenerarDocumentREST | GET | [URL petició](https://wsproves.orgt.diba.cat/Deutes/DeutesServiceREST.svc/GenerarDocumentREST?DNINIFContribuent=00000000&CodiINE10=0810170005&Idioma=C) <br> [Resposta](https://github.com/organisme-de-gestio-tributaria/consulta-deutes-tributaris/blob/main/Exemples/Resposta%20GenerarDocumentREST.json)
+| ObtenirLlistaDeutesREST | GET | [URL petició](https://wsproves.orgt.diba.cat/Deutes/DeutesServiceREST.svc/ObtenirLlistaDeutesREST?DNINIFContribuent=00000000&CodiINE10=0810170005&Idioma=C) <br> [Resposta](https://github.com/organisme-de-gestio-tributaria/consulta-deutes-tributaris/blob/main/Exemples/ObtenirLlistaDeutesREST.json)
+| ObtenirLlistaDeutesVehicleREST | GET | [URL petició](https://wsproves.orgt.diba.cat/Deutes/DeutesServiceREST.svc/ObtenirLlistaDeutesVehicleREST?DNINIFContribuent=00000000&CodiINE10=0810170005&Idioma=C&Matricula=1234ABC) <br> [Resposta](https://github.com/organisme-de-gestio-tributaria/consulta-deutes-tributaris/blob/main/Exemples/ObtenirLlistaDeutesVehicleREST.json)
 
 
 
