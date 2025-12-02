@@ -20,7 +20,7 @@ Respecte a la seguretat, cal tenir en compte:
    - O bé les dades enviades corresponen a l’Ajuntament associat al certificat.
    - O bé el certificat utilitzat és d'una entitat supramunicipal que consta a l'ORGT amb permisos per a consultar els deutes en municipis específics.
 1. Per fer les proves també cal fer servir un certificat d'òrgan.
-1. **Previ a les proves cal comunicar el certificat utilitzat a l’ORGT ja que és necessari instal·lar la clau pública als servidors de la ORGT.** Vegeu el procés de sol·licitud a la [pàgina principal](https://github.com/organisme-de-gestio-tributaria/organisme-de-gestio-tributaria)
+1. **Previ a les proves cal comunicar el certificat utilitzat a l’ORGT ja que és necessari instal·lar la clau pública als servidors de la ORGT.** Vegeu el procediment d'adhesió a l'inici d'aquest web, els detalls estan en el formulari d'adhesió.
 
 Els endpoints disponibles són:
 1. **GenerarDocumentREST** Permet generar els documents acreditatius de que un DNI/NIF té o no té deutes amb l'ajuntament. Cal introduir:
