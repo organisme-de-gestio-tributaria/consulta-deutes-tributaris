@@ -44,6 +44,9 @@ A continuació es presenten diversos exemples de crides i respostes. Podeu troba
 * [Comentaris del WSDL](https://wsproves.orgt.diba.cat/deutes/DeutesServiceREST.svc?singleWsdl). Podeu cancel·lar la sol·licitud de certificat a l'accedir al WSDL. Malgrat que aquest wsdl està disponible només per la versió SOAP, els noms dels camps i les explicacions són les mateixes que per la versió REST.
 * L’esquema de validació de les dades rebudes es troba en el mateix webservice a: https://wsproves.orgt.diba.cat/deutes/schema/Deutes.xsd 
 * Cal notar que totes les dades de tipus text han d'estar en majúscules.
+* Els imports es representen mitjançant nombres sense decimals en cèntims d'euro. Així, per exemple, l'import 101,23€ es representa amb 10123. D'altra banda, l'import de 102€ es representa com 10200. Es pot consultar els fitxers XSD i WSDL prèviament enllaçats.
+
+Endpoints disponibles en el webservice:
 
 | Endpoint | Mètode HTTP | Exemples |
 |---|---|---|
